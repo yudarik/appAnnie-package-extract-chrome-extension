@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>AppAnnie PackageName extractor</title>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" type="text/css" href="popup.css"/>
+</head>
+<body>
+<section id="app-control">
+
+    <h3>AppAnnie PackageName extractor</h3>
+    <p>Focus the page and specify column number to get package-name from</p>
+    <p>
+        <label>Column number:</label>&nbsp;
+        <input id="columnNum" type="number" value="4" min="2" max="6"/>
+    </p>
+
+    <br/>
+    <button id="checkPage">Extract package name</button>
+</section>
+<section id="list">
+    <button id="reset">Reset</button>
+    <ul></ul>
+</section>
+
+
+</body>
+</html>

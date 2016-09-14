@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "AppAnnie Analyzer Plugin",
+  "description": "This extension will analyze a page",
+  "version": "1.0",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["popup.js"]
+  },
+  "content_scripts": [{
+    "matches": ["*://*.appannie.com/*"],
+    "js": ["3party/jquery-3.1.0.slim.min.js", "content.js"],
+    "run_at": "document_end"
+  }],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "<all_urls>"
+  ]
+}
